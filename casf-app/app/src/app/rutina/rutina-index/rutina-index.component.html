@@ -1,0 +1,150 @@
+<div class="fecha">
+  <mat-grid-list cols="6" rowHeight="1:1" gutterSize="5px" class="dias-semana">
+    <mat-grid-tile class="dia" (click)="setDiaActivo(0)" [ngClass]="{'dia-activo': diaActivo === 0}">
+      <button mat-button>
+        <h6>Lu</h6>
+        <h6>18</h6>
+      </button>
+      <span class="hay-rutina"></span>
+    </mat-grid-tile>
+    <mat-grid-tile class="dia" (click)="setDiaActivo(1)" [ngClass]="{'dia-activo': diaActivo === 1}">
+      <button mat-button>
+        <h6>Ma</h6>
+        <h6>19</h6>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile class="dia" (click)="setDiaActivo(2)" [ngClass]="{'dia-activo': diaActivo === 2}">
+      <button mat-button>
+        <h6>Mi</h6>
+        <h6>20</h6>
+      </button>
+      <span class="hay-rutina"></span>
+    </mat-grid-tile>
+    <mat-grid-tile class="dia" (click)="setDiaActivo(3)" [ngClass]="{'dia-activo': diaActivo === 3}">
+      <button mat-button>
+        <h6>Ju</h6>
+        <h6>21</h6>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile class="dia" (click)="setDiaActivo(4)" [ngClass]="{'dia-activo': diaActivo === 4}">
+      <button mat-button>
+        <h6>Vi</h6>
+        <h6>22</h6>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile class="dia" (click)="setDiaActivo(5)" [ngClass]="{'dia-activo': diaActivo === 5}">
+      <button mat-button>
+        <h6>Sa</h6>
+        <h6>23</h6>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div class="ver-calendario">
+    <button mat-button (click)="showCalendar = !showCalendar">
+      <mat-icon>{{ showCalendar ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div class="calendario-container" [ngClass]="{'show-calendar': showCalendar}">
+  <mat-calendar class="calendario" [(selected)]="selectedDate"></mat-calendar>
+</div>
+
+
+<div class="romboide">
+  <h5>Espalda - Bicep - Hombro</h5>
+</div>
+
+<div class="timer">
+  <div class="timer-progreso">
+    <p>En progreso</p>
+  </div>
+  <div class="timer-botones">
+    <button mat-button><p class="p2">Iniciar</p></button>
+    <p>00:00:00</p>
+  </div>
+</div>
+
+<div class="serie">
+  <div class="serie-numero">
+    <h5>Instrucciones</h5>
+  </div>
+  
+  <div class="ejercicio">
+    <div class="ejercicio-info">
+      <h6 class="p2">Calentamiento:</h6>
+      <p class="p3">10 mins en bicicleta elíptica</p>
+    </div>
+    <br>
+    <div class="ejercicio-info">
+      <h6 class="p2">Progresiones:</h6>
+      <p class="p3">Semana 1 y 2: 3 series x 15 reps</p>
+      <p class="p3">Semana 3 y 4: 3 series x 15 reps + peso</p>
+      <p class="p3">Semana 5 y 6: 3 series x 20 reps</p>
+      <p class="p3">Semana 7 y 8: 4 series x 10 reps</p>
+    </div>
+  </div>
+</div>
+
+<div class="serie">
+  <div class="serie-numero">
+    <h5>Serie 1</h5>
+  </div>
+  
+  <div class="ejercicio">
+    <div class="ejercicio-info">
+      <h6 class="p3">Remo T con triángulo</h6>
+      <p class="p4">4 sets x 8 reps</p>
+    </div>
+    <a class="ejercicio-video" (click)="openVideoDialog()">
+      <p class="p4">Ver video</p>
+      <mat-icon class="icon-p3">play_circle</mat-icon>
+    </a>
+  </div>
+</div>
+
+<div class="serie">
+  <div class="serie-numero">
+    <h5>Serie 2</h5>
+  </div>
+  
+  <div class="ejercicio">
+    <div class="ejercicio-info">
+      <h6 class="p3">Jalón individual en polea alta</h6>
+      <p class="p4">3 sets x 10 reps</p>
+    </div>
+    <a class="ejercicio-video" (click)="openVideoDialog()">
+      <p class="p4">Ver video</p>
+      <mat-icon class="icon-p3">play_circle</mat-icon>
+    </a>
+  </div>
+  
+  <div class="ejercicio">
+    <div class="ejercicio-info">
+      <h6 class="p3">Extensión tricep sobre cabeza polea</h6>
+      <p class="p4">4 sets x 10 reps</p>
+    </div>
+    <a class="ejercicio-video" (click)="openVideoDialog()">
+      <p class="p4">Ver video</p>
+      <mat-icon class="icon-p3">play_circle</mat-icon>
+    </a>
+  </div>
+</div>
+
+<div class="serie">
+  <div class="serie-numero">
+    <h5>Serie 3</h5>
+  </div>
+  
+  <div class="ejercicio">
+    <div class="ejercicio-info">
+      <h6 class="p3">Fondos asistidos en máquina</h6>
+      <p class="p4">4 sets x 10 reps</p>
+    </div>
+    <a class="ejercicio-video" (click)="openVideoDialog()">
+      <p class="p4">Ver video</p>
+      <mat-icon class="icon-p3">play_circle</mat-icon>
+    </a>
+  </div>
+</div>
